@@ -1,0 +1,10 @@
+schema_version = "1.0.0"
+
+id = "mayaux_sample_addon"
+version = "1.0.0"
+name = "MayaUX Sample Add-on"
+tagline = "Sample third-party operators for MayaUX Shelf testing"
+maintainer = "MayaUX"
+type = "add-on"
+blender_version_min = "4.2.0"
+license = ["SPDX:GPL-3.0-or-later"]

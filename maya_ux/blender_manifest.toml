@@ -1,0 +1,28 @@
+schema_version = "1.0.0"
+
+id = "maya_ux"
+version = "1.0.0"
+name = "MayaUX"
+tagline = "Maya-style keymap profile and Shelf for Blender"
+maintainer = "MayaUX"
+type = "add-on"
+
+website = "https://github.com/ebsvlab1/ai_st"
+tags = ["User Interface", "3D View", "Animation"]
+
+# 초기 검증 기준은 4.5 LTS. 확장 시스템이 도입된 4.2 부터 설치 가능.
+blender_version_min = "4.2.0"
+
+license = ["SPDX:GPL-3.0-or-later"]
+
+[permissions]
+files = "Import/export Shelf and keymap settings, run trusted scripts"
+
+[build]
+paths_exclude_pattern = [
+  "__pycache__/",
+  "/tests/",
+  "/docs/",
+  "/.git/",
+  "*.zip",
+]
