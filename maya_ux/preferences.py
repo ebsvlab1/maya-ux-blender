@@ -90,8 +90,9 @@ class MayaUXPreferences(bpy.types.AddonPreferences):
                           icon="CHECKBOX_HLT" if S.keymap.enabled else "CHECKBOX_DEHLT", depress=S.keymap.enabled)
         op.enable = not S.keymap.enabled
         row = box.row(align=True)
-        for key in PROFILES:
-            op = row.operator("maya_ux.km_profile", text=key, depress=S.keymap.profile == key)
+        row.label(text="프로파일:")
+        for key, desc in PROFILES.items():
+            op = row.operator("maya_ux.km_profile", text=desc.split(" — ")[0], depress=S.keymap.profile == key)
             op.profile = key
         if sys.platform == "darwin":
             op = box.operator("maya_ux.km_mac_cmd", text="Ctrl 단축키를 Cmd 로 등록",
